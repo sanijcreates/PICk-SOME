@@ -6,7 +6,7 @@ import {getClass} from '../utils/getClass'
 function Photos() {
     const {photos} = useContext(CustomContext)
     const mappedImages = photos.map((photo, i ) => (
-        <Image key = {photo.id} img = {photo.url} className = {getClass(i)} id = {photo.id}/>
+        <Image key = {photo.id} img = {photo.url} className = {getClass(i)} id = {photo.id} photo = {photo}/>
     ))
     return (
         <main className="photos">
